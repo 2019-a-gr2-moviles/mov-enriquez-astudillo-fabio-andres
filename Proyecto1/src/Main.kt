@@ -74,6 +74,15 @@ fun main(args: Array<String>) {
         println("Nota: $nota")
     }
 
+    val respuestafilter = notas.filter {
+        .filter{
+            it in 3..4
+        }
+        .map {
+            it*2
+        }
+    }
+
 
     // MAP -> itera y modifica el arreglo
     // Impares +1  Pares +2
