@@ -74,21 +74,13 @@ fun main(args: Array<String>) {
         println("Nota: $nota")
     }
 
-    val respuestafilter = notas.filter {
-        .filter{
-            it in 3..4
-        }
-        .map {
-            it*2
-        }
-    }
-
 
     // MAP -> itera y modifica el arreglo
     // Impares +1  Pares +2
     val notasDos = notas.map { nota ->
         val modulo = nota % 2
         val esPar = 0
+        /*  */
         when (modulo) {
             esPar -> {
                 nota + 1
@@ -97,12 +89,42 @@ fun main(args: Array<String>) {
                 nota + 2
             }
         }
+
+
     }
 
     notasDos.forEach {
         println("Notas 2: $it")
     }
 
+
+    val respuestaFilter = notas
+        .filter {
+            // Filtra el arreglo
+            it in 3..4
+            // it > 2 && it < 5
+        }
+        .map {
+            // Mutar o Cambiar el arreglo
+            it * 2
+        }
+
+    respuestaFilter.forEach { println(it) }
+
+    val novias = arrayListOf(1, 2, 2, 3, 4, 5)
+
+    val respuestaNovia: Boolean = novias.any {
+        it == 7
+    }
+
+    println(respuestaNovia) // true
+    println(respuestaNovia) // false
+
+    val tazos = arrayListOf(1,2,3,4,5,6,7)
+
+    tazos.all {
+        it > 1
+    }
 
     // val fecha = Date()
     // fecha.time = 11231231
@@ -126,6 +148,8 @@ fun holaMundoAvanzado(mensaje: Any): Unit {
 fun sumarDosNumeros(numUno: Int, numDos: Int): Int {
     return numUno + numDos
 }
+
+
 
 
 fun estaJalado(nota: Double): Double {
