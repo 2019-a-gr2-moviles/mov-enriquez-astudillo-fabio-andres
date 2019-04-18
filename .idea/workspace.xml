@@ -41,12 +41,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="mov-eguez-sarzosa-vicente-adrian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mov-eguez-sarzosa-vicente-adrian" type="462c0819:PsiDirectoryNode" />
+              <item name="mov-enriquez-astudillo-fabio-andres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mov-enriquez-astudillo-fabio-andres" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mov-eguez-sarzosa-vicente-adrian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mov-eguez-sarzosa-vicente-adrian" type="462c0819:PsiDirectoryNode" />
+              <item name="mov-enriquez-astudillo-fabio-andres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mov-enriquez-astudillo-fabio-andres" type="462c0819:PsiDirectoryNode" />
               <item name="01-kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -109,9 +109,9 @@
       <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven" />
     </layout>
   </component>
   <component name="editorHistoryManager">
