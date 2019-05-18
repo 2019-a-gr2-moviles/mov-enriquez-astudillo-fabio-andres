@@ -21,7 +21,12 @@ class MainActivity : AppCompatActivity() {
             this,
             Actividad2::class.java
         )
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+
+        intent.putExtra("nombre","Fabio")
+        intent.putExtra("edad",22)
         startActivity(intent)
+
     }
 
 
