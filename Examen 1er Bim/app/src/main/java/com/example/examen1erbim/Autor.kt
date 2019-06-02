@@ -30,7 +30,18 @@ class Autor
 
     companion object{
         val listaAutores = ArrayList<Autor>()
+        val listaAutoresNombres = ArrayList<String>();
+
+        fun crearListaNombres() {
+            var i = 0
+            listaAutores.forEach(){
+                listaAutoresNombres[i] = it.nombres
+            }
+        }
+
     }
+
+
 
 
 }
