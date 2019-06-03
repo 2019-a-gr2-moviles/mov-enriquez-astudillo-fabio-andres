@@ -12,21 +12,21 @@ class GestionarAutores : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gestionar_autores)
 
-        llenarLista()
+        Autor.crearListaNombres()
+        println("Hola")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, Autor.listaAutoresNombres)
+        println("Hola2")
+        lista_autores.adapter = adapter
 
 
 
     }
 
-    fun llenarLista(){
-        Autor.crearListaNombres()
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, Autor.listaAutoresNombres)
 
-        lista_autores.adapter = adapter
 
 //        lista_autores.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
 //
 //        }
-    }
+
 
 }

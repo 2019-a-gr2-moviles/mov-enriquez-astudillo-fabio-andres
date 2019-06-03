@@ -23,13 +23,13 @@ class CrearAutores : AppCompatActivity() {
     var num = 0;
     fun crearAutor(){
         val autor1: Autor = Autor(input_nombre.text.toString(), input_apellido.text.toString(), input_fecha.text.toString(), input_ec.isChecked(), num)
-        Autor.listaAutores.add(autor1)
-
+        println(autor1.nombres)
         num++
 
         val intentExplicito = Intent(
             this,Autores::class.java
         )
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 }

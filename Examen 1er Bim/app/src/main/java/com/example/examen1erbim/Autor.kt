@@ -33,9 +33,9 @@ class Autor
         val listaAutoresNombres = ArrayList<String>();
 
         fun crearListaNombres() {
-            var i = 0
+            listaAutoresNombres.clear()
             listaAutores.forEach(){
-                listaAutoresNombres[i] = it.nombres
+                listaAutoresNombres.add(it.nombres)
             }
         }
 

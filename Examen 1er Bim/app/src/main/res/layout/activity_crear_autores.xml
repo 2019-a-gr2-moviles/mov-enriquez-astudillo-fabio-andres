@@ -13,42 +13,43 @@
             android:inputType="textPersonName"
             android:text="Name"
             android:ems="10"
-            tools:layout_editor_absoluteX="99dp" android:id="@+id/input_nombre" android:layout_marginTop="252dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/input_apellido"
-            app:layout_constraintVertical_bias="0.107"/>
+            android:id="@+id/input_nombre"
+            android:layout_marginBottom="44dp" app:layout_constraintBottom_toTopOf="@+id/input_apellido"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="LName"
             android:ems="10"
             android:id="@+id/input_apellido"
             app:layout_constraintStart_toStartOf="@+id/input_nombre"
-            app:layout_constraintEnd_toEndOf="@+id/input_nombre" app:layout_constraintHorizontal_bias="1.0"
-            tools:layout_editor_absoluteY="361dp"/>
+            app:layout_constraintEnd_toEndOf="@+id/input_nombre" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="56dp" app:layout_constraintBottom_toTopOf="@+id/input_fecha"/>
     <CheckBox
             android:text="CheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/input_ec"
-            android:layout_marginBottom="52dp" app:layout_constraintBottom_toTopOf="@+id/btn_autor"
-            tools:layout_editor_absoluteX="153dp"/>
+            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/btn_autor"
+            app:layout_constraintEnd_toEndOf="@+id/input_fecha"
+            app:layout_constraintStart_toStartOf="@+id/input_fecha" app:layout_constraintHorizontal_bias="0.564"/>
     <Button
             android:text="Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_autor" app:layout_constraintEnd_toEndOf="@+id/input_ec"
             app:layout_constraintStart_toStartOf="@+id/input_ec" android:layout_marginBottom="48dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="Date"
             android:ems="10"
             android:id="@+id/input_fecha"
             app:layout_constraintEnd_toEndOf="@+id/input_apellido"
-            app:layout_constraintStart_toStartOf="@+id/input_apellido" android:layout_marginBottom="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_ec" app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintStart_toStartOf="@+id/input_apellido" android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_ec" app:layout_constraintHorizontal_bias="1.0"/>
 </android.support.constraint.ConstraintLayout>
