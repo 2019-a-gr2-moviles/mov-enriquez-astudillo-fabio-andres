@@ -9,19 +9,28 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".GestionarLibro">
+        <activity
+                android:name=".GestionarLibro"
+                android:label="@string/GestionarLibro">
         </activity>
-        <activity android:name=".CrearLibros">
+        <activity
+                android:name=".CrearLibros"
+                android:label="@string/CrearLibro">
         </activity>
-        <activity android:name=".GestionarLibros">
+        <activity android:name=".GestionarLibros"
+                  android:label="@string/ListaLibros">
         </activity>
-        <activity android:name=".GestionarAutor">
+        <activity android:name=".GestionarAutor"
+                  android:label="@string/GestionarAutor">
         </activity>
-        <activity android:name=".CrearAutores">
+        <activity android:name=".CrearAutores"
+                  android:label="@string/CrearAutor">
         </activity>
-        <activity android:name=".GestionarAutores">
+        <activity android:name=".GestionarAutores"
+                  android:label="@string/ListaAutores">
         </activity>
-        <activity android:name=".Autores">
+        <activity android:name=".Autores"
+                  android:label="@string/Autores">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

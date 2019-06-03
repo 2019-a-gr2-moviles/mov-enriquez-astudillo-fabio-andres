@@ -31,6 +31,7 @@ class CrearLibros : AppCompatActivity() {
         val intentExplicito = Intent(
             this,GestionarAutor::class.java
         )
+        intentExplicito.putExtra("mensaje", Autor.nombre+", se ha creado un libro")
         intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }

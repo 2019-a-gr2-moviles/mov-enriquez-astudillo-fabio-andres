@@ -12,19 +12,18 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/input2_isbn" android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_nombre" android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:id="@+id/input2_isbn" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_nombre"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
-            android:id="@+id/input_nombre" android:layout_marginBottom="16dp"
+            android:id="@+id/input_nombre" android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toTopOf="@+id/input_numPag"
-            app:layout_constraintEnd_toEndOf="@+id/input2_isbn" app:layout_constraintStart_toStartOf="@+id/input2_isbn"/>
+            app:layout_constraintEnd_toEndOf="@+id/input2_isbn"
+            app:layout_constraintStart_toStartOf="@+id/input2_isbn"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +31,8 @@
             android:ems="10"
             android:id="@+id/input_numPag" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/input_edicion"
-            app:layout_constraintEnd_toEndOf="@+id/input_nombre" app:layout_constraintStart_toStartOf="@+id/input_nombre"/>
+            app:layout_constraintEnd_toEndOf="@+id/input_nombre"
+            app:layout_constraintStart_toStartOf="@+id/input_nombre"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,30 +40,82 @@
             android:ems="10"
             android:id="@+id/input_edicion" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/input_fecha"
-            app:layout_constraintEnd_toEndOf="@+id/input_numPag" app:layout_constraintStart_toStartOf="@+id/input_numPag"/>
+            app:layout_constraintStart_toStartOf="@+id/input_numPag"
+            app:layout_constraintEnd_toEndOf="@+id/input_numPag"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/input_fecha" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/input2_editorial"
-            app:layout_constraintEnd_toEndOf="@+id/input_edicion" app:layout_constraintStart_toStartOf="@+id/input_edicion"/>
+            app:layout_constraintStart_toStartOf="@+id/input_edicion"
+            app:layout_constraintEnd_toEndOf="@+id/input_edicion"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/input2_editorial" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_crearLibro"
-            app:layout_constraintEnd_toEndOf="@+id/input_fecha" app:layout_constraintStart_toStartOf="@+id/input_fecha"/>
+            app:layout_constraintEnd_toEndOf="@+id/input_fecha"
+            app:layout_constraintStart_toStartOf="@+id/input_fecha"/>
     <Button
-            android:text="Button"
+            android:text="@string/CrearLibro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_crearLibro" app:layout_constraintEnd_toEndOf="@+id/input2_editorial"
             app:layout_constraintStart_toStartOf="@+id/input2_editorial" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="@string/ISBN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/input2_isbn"
+            android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="@+id/input2_isbn"
+            app:layout_constraintTop_toTopOf="@+id/input2_isbn"/>
+    <TextView
+            android:text="@string/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/input_nombre"
+            android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="@+id/input_nombre"
+            app:layout_constraintBottom_toBottomOf="@+id/input_nombre"/>
+    <TextView
+            android:text="@string/Pags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView16" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/input_numPag"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/input_numPag"
+            app:layout_constraintBottom_toBottomOf="@+id/input_numPag"/>
+    <TextView
+            android:text="@string/Edicion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/input_edicion"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/input_edicion"
+            app:layout_constraintBottom_toBottomOf="@+id/input_edicion"/>
+    <TextView
+            android:text="@string/FechaPub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/input_fecha"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/input_fecha"
+            app:layout_constraintBottom_toBottomOf="@+id/input_fecha"/>
+    <TextView
+            android:text="@string/Editorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView19" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/input2_editorial"
+            android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="@+id/input2_editorial"
+            app:layout_constraintBottom_toBottomOf="@+id/input2_editorial"/>
 </android.support.constraint.ConstraintLayout>

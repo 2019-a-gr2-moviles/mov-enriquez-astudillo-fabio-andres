@@ -23,6 +23,8 @@ class GestionarAutores : AppCompatActivity() {
                 this,GestionarAutor::class.java
             )
             intentExplicito.putExtra("pos", position)
+            intentExplicito.putExtra("mensaje", "Gestionar Autor")
+
             println(position)
             startActivity(intentExplicito)
         }

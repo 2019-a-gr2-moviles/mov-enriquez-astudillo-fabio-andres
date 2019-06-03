@@ -11,10 +11,9 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/input_nombre2" android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_apell2" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:id="@+id/input_nombre2"
+            tools:layout_editor_absoluteX="83dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,9 +21,8 @@
             android:text="Name"
             android:ems="10"
             android:id="@+id/input_apell2"
-            app:layout_constraintEnd_toEndOf="@+id/input_nombre2"
-            app:layout_constraintStart_toStartOf="@+id/input_nombre2" android:layout_marginBottom="28dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_fech2" app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintEnd_toEndOf="@+id/textView6" app:layout_constraintStart_toStartOf="@+id/textView6"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/textView7"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,53 +30,85 @@
             android:text="Name"
             android:ems="10"
             android:id="@+id/input_fech2"
-            app:layout_constraintEnd_toEndOf="@+id/input_apell2"
-            app:layout_constraintStart_toStartOf="@+id/input_apell2" android:layout_marginBottom="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_ecu2" app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintEnd_toEndOf="@+id/textView7" app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintHorizontal_bias="0.493" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_ecu2"/>
     <CheckBox
-            android:text="CheckBox"
+            android:text="@string/Ecu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/input_ecu2" app:layout_constraintStart_toStartOf="@+id/input_fech2"
+            android:id="@+id/input_ecu2"
             app:layout_constraintEnd_toEndOf="@+id/input_fech2"
-            app:layout_constraintHorizontal_bias="0.495"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/input_numLib2"/>
+            app:layout_constraintStart_toStartOf="@+id/input_fech2"
+            app:layout_constraintBottom_toTopOf="@+id/input_numLib2"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/input_numLib2" app:layout_constraintStart_toStartOf="@+id/input_ecu2"
-            app:layout_constraintEnd_toEndOf="@+id/input_ecu2" app:layout_constraintHorizontal_bias="0.594"
-            app:layout_constraintBottom_toTopOf="@+id/btn_elim" android:layout_marginBottom="52dp"/>
+            android:id="@+id/input_numLib2"
+            app:layout_constraintEnd_toEndOf="@+id/input_ecu2"
+            app:layout_constraintStart_toStartOf="@+id/input_ecu2" android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_elim" app:layout_constraintHorizontal_bias="0.514"/>
     <Button
-            android:text="El"
+            android:text="@string/Eliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_elim" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="52dp"
             android:layout_marginBottom="36dp" app:layout_constraintBottom_toTopOf="@+id/btn_gest_lib"
     />
     <Button
-            android:text="act"
+            android:text="@string/Actualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_act" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_elim" android:layout_marginStart="8dp"
             android:layout_marginBottom="36dp" app:layout_constraintBottom_toTopOf="@+id/btn_cre_lib"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.591"
     />
     <Button
-            android:text="gest"
+            android:text="@string/ListaLibros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_gest_lib" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="52dp"
-            android:layout_marginBottom="32dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="28dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
-            android:text="cre"
+            android:text="@string/CrearLibro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_cre_lib" app:layout_constraintStart_toEndOf="@+id/btn_gest_lib"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="32dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="28dp"/>
+    <TextView
+            android:text="@string/Nombres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_nombre2"
+            app:layout_constraintHorizontal_bias="0.465" android:layout_marginBottom="4dp"/>
+    <TextView
+            android:text="@string/Apellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" app:layout_constraintEnd_toEndOf="@+id/input_nombre2"
+            app:layout_constraintStart_toStartOf="@+id/input_nombre2" app:layout_constraintHorizontal_bias="0.509"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/input_apell2"/>
+    <TextView
+            android:text="@string/FechaNac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" app:layout_constraintEnd_toEndOf="@+id/input_apell2"
+            app:layout_constraintStart_toStartOf="@+id/input_apell2" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_fech2"/>
+    <TextView
+            android:text="@string/Numb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView20" app:layout_constraintEnd_toStartOf="@+id/input_numLib2"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/input_ecu2"
+            app:layout_constraintBottom_toBottomOf="@+id/input_numLib2" app:layout_constraintVertical_bias="1.0"/>
 </android.support.constraint.ConstraintLayout>

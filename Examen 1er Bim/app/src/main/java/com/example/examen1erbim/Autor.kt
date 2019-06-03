@@ -46,6 +46,8 @@ class Autor
             }
         }
 
+        var nombre = "";
+
     }
 
 

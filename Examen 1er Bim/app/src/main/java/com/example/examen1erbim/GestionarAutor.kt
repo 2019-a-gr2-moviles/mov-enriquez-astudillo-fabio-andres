@@ -3,6 +3,7 @@ package com.example.examen1erbim
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import kotlinx.android.synthetic.main.activity_gestionar_autor.*
 
 class GestionarAutor : AppCompatActivity() {
@@ -13,6 +14,12 @@ class GestionarAutor : AppCompatActivity() {
 
         val pos = intent.getIntExtra("pos",0)
         println(pos)
+
+        val mensaje = intent.getStringExtra("mensaje")
+
+        Snackbar
+            .make(findViewById(android.R.id.content), mensaje, Snackbar.LENGTH_LONG)
+            .setAction("Action", null).show()
 
         input_nombre2.setText(Autor.listaAutores.get(pos).nombres)
         input_apell2.setText(Autor.listaAutores.get(pos).apellidos)
@@ -57,8 +64,9 @@ class GestionarAutor : AppCompatActivity() {
     fun eliminar(pos:Int){
         Autor.listaAutores.removeAt(pos)
         val intentExplicito = Intent(
-            this,GestionarAutores::class.java
+            this,Autores::class.java
         )
+        intentExplicito.putExtra("mensaje", Autor.nombre+", se ha eliminado el Autor")
         intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
@@ -68,11 +76,9 @@ class GestionarAutor : AppCompatActivity() {
         Autor.listaAutores.get(pos).apellidos = input_apell2.text.toString();
         Autor.listaAutores.get(pos).fechaNacimiento = input_fech2.text.toString();
         Autor.listaAutores.get(pos).ecuatoriano = input_ecu2.isChecked;
-        val intentExplicito = Intent(
-            this,GestionarAutores::class.java
-        )
-        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        startActivity(intentExplicito)
+        Snackbar
+            .make(findViewById(android.R.id.content), Autor.nombre + ", se ha actualizado el Autor", Snackbar.LENGTH_LONG)
+            .setAction("Action", null).show()
     }
 
 }

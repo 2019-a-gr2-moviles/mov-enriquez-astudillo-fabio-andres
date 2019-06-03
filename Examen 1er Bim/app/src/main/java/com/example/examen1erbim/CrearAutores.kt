@@ -26,6 +26,7 @@ class CrearAutores : AppCompatActivity() {
         val intentExplicito = Intent(
             this,Autores::class.java
         )
+        intentExplicito.putExtra("mensaje",Autor.nombre + ", se ha creado un nuevo Autor")
         intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
