@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/input_isbn" android:layout_marginBottom="16dp"
+            android:id="@+id/input2_isbn" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/input_nombre" android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -24,7 +24,7 @@
             android:ems="10"
             android:id="@+id/input_nombre" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/input_numPag"
-            app:layout_constraintEnd_toEndOf="@+id/input_isbn" app:layout_constraintStart_toStartOf="@+id/input_isbn"/>
+            app:layout_constraintEnd_toEndOf="@+id/input2_isbn" app:layout_constraintStart_toStartOf="@+id/input2_isbn"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:text="Name"
             android:ems="10"
             android:id="@+id/input_fecha" android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_editorial"
+            app:layout_constraintBottom_toTopOf="@+id/input2_editorial"
             app:layout_constraintEnd_toEndOf="@+id/input_edicion" app:layout_constraintStart_toStartOf="@+id/input_edicion"/>
     <EditText
             android:layout_width="wrap_content"
@@ -56,14 +56,14 @@
             android:inputType="textPersonName"
             android:text="Name"
             android:ems="10"
-            android:id="@+id/input_editorial" android:layout_marginBottom="16dp"
+            android:id="@+id/input2_editorial" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_crearLibro"
             app:layout_constraintEnd_toEndOf="@+id/input_fecha" app:layout_constraintStart_toStartOf="@+id/input_fecha"/>
     <Button
             android:text="Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_crearLibro" app:layout_constraintEnd_toEndOf="@+id/input_editorial"
-            app:layout_constraintStart_toStartOf="@+id/input_editorial" android:layout_marginBottom="16dp"
+            android:id="@+id/btn_crearLibro" app:layout_constraintEnd_toEndOf="@+id/input2_editorial"
+            app:layout_constraintStart_toStartOf="@+id/input2_editorial" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>

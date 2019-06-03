@@ -21,12 +21,13 @@ class GestionarLibros : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, Autor.listaAutores.get(pos).nombresLibros)
 
         list_libros.adapter = adapter
-//        list_libros.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-//            val intentExplicito = Intent(
-//                this,GestionarAutor::class.java
-//            )
-//            intent.putExtra("pos", position)
-//            startActivity(intentExplicito)
-//        }
+        list_libros.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val intentExplicito = Intent(
+                this,GestionarLibro::class.java
+            )
+            intentExplicito.putExtra("pos", pos)
+            intentExplicito.putExtra("pos2", position)
+            startActivity(intentExplicito)
+        }
     }
 }

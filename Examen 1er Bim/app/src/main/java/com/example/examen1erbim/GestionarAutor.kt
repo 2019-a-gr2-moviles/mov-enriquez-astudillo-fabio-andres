@@ -27,6 +27,14 @@ class GestionarAutor : AppCompatActivity() {
         btn_gest_lib.setOnClickListener {
             irAGestLib(pos)
         }
+
+        btn_act.setOnClickListener {
+            actualizar(pos)
+        }
+
+        btn_elim.setOnClickListener {
+            eliminar(pos)
+        }
     }
     fun irAGestLib(pos:Int){
         val intentExplicito = Intent(
@@ -43,6 +51,27 @@ class GestionarAutor : AppCompatActivity() {
         )
         intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intentExplicito.putExtra("pos", pos)
+        startActivity(intentExplicito)
+    }
+
+    fun eliminar(pos:Int){
+        Autor.listaAutores.removeAt(pos)
+        val intentExplicito = Intent(
+            this,GestionarAutores::class.java
+        )
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intentExplicito)
+    }
+
+    fun actualizar(pos:Int){
+        Autor.listaAutores.get(pos).nombres = input_nombre2.text.toString();
+        Autor.listaAutores.get(pos).apellidos = input_apell2.text.toString();
+        Autor.listaAutores.get(pos).fechaNacimiento = input_fech2.text.toString();
+        Autor.listaAutores.get(pos).ecuatoriano = input_ecu2.isChecked;
+        val intentExplicito = Intent(
+            this,GestionarAutores::class.java
+        )
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 

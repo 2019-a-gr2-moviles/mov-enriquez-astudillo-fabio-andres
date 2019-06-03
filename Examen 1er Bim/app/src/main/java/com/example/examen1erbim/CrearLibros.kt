@@ -19,15 +19,15 @@ class CrearLibros : AppCompatActivity() {
     }
 
     fun crearLibro(pos: Int){
-        val libro1: Libro = Libro(input_isbn.text.toString().toInt(),
+        val libro1: Libro = Libro(input2_isbn.text.toString().toInt(),
                                     input_nombre.text.toString(),
                                     input_numPag.text.toString().toInt(),
                                     input_edicion.text.toString().toInt(),
                                     input_fecha.text.toString(),
-                                    input_editorial.text.toString(),
+                                    input2_editorial.text.toString(),
                                     pos
             )
-
+        
         val intentExplicito = Intent(
             this,GestionarAutor::class.java
         )

@@ -4,13 +4,13 @@ import java.util.*
 
 class Libro
 (
-    val ICBN: Int,
-    val nombre: String,
-    val numeroPaginas: Int,
-    val edicion: Int,
-    val fechaPublicacion: String,
-    val nombreEditorial: String,
-    val idAutor: Int
+    var ICBN: Int,
+    var nombre: String,
+    var numeroPaginas: Int,
+    var edicion: Int,
+    var fechaPublicacion: String,
+    var nombreEditorial: String,
+    var idAutor: Int
 )
 {
     init {

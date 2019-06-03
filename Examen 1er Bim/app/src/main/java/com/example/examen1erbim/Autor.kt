@@ -5,10 +5,10 @@ import kotlin.collections.ArrayList
 
 class Autor
 (
-    val nombres: String,
-    val apellidos: String,
-    val fechaNacimiento: String,
-    val ecuatoriano: Boolean
+    var nombres: String,
+    var apellidos: String,
+    var fechaNacimiento: String,
+    var ecuatoriano: Boolean
 )
 
 
