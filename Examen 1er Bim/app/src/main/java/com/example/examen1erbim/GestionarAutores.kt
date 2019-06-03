@@ -1,5 +1,6 @@
 package com.example.examen1erbim
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
@@ -13,20 +14,25 @@ class GestionarAutores : AppCompatActivity() {
         setContentView(R.layout.activity_gestionar_autores)
 
         Autor.crearListaNombres()
-        println("Hola")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, Autor.listaAutoresNombres)
-        println("Hola2")
-        lista_autores.adapter = adapter
 
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, Autor.listaAutoresNombres)
+
+        lista_autores.adapter = adapter
+        lista_autores.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val intentExplicito = Intent(
+                this,GestionarAutor::class.java
+            )
+            intentExplicito.putExtra("pos", position)
+            println(position)
+            startActivity(intentExplicito)
+        }
 
 
     }
 
 
 
-//        lista_autores.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-//
-//        }
+
 
 
 }

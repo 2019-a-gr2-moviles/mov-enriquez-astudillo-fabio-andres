@@ -8,13 +8,13 @@ class Libro
     val nombre: String,
     val numeroPaginas: Int,
     val edicion: Int,
-    val fechaPublicacion: Date,
+    val fechaPublicacion: String,
     val nombreEditorial: String,
-    val idAutor: Int,
-    val id: Int
+    val idAutor: Int
 )
 {
     init {
         Autor.listaAutores.get(idAutor).libros.add(this)
     }
+
 }

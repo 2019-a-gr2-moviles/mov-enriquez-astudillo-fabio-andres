@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".CrearLibros">
+        </activity>
+        <activity android:name=".GestionarLibros">
+        </activity>
         <activity android:name=".GestionarAutor">
         </activity>
         <activity android:name=".CrearAutores">

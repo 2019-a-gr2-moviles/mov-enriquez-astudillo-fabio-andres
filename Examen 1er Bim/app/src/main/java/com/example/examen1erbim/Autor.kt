@@ -8,14 +8,14 @@ class Autor
     val nombres: String,
     val apellidos: String,
     val fechaNacimiento: String,
-    val ecuatoriano: Boolean,
-    val id: Int
+    val ecuatoriano: Boolean
 )
 
 
 {
 
     val libros: ArrayList<Libro> = ArrayList<Libro>();
+    val nombresLibros: ArrayList<String> = ArrayList<String>()
     var numeroLibros: Int
 
 
@@ -26,6 +26,13 @@ class Autor
 
     fun cambiarNumeros(){
         this.numeroLibros = libros.size
+    }
+
+    fun crearListaNombres() {
+        nombresLibros.clear()
+        libros.forEach(){
+            nombresLibros.add(it.nombre)
+        }
     }
 
     companion object{
