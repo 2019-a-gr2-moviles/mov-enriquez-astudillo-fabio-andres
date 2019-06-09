@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ingresar al Sistema</string>
+    <string name="GestionarLibro">Datos del Libro</string>
+    <string name="GestionarAutor">Datos del Autor</string>
+    <string name="ListaLibros">Lista de Libros</string>
+    <string name="ListaAutores">Lista de Autores</string>
+    <string name="Autores">Autores</string>
+    <string name="CrearLibro">Crear Nuevo Libro</string>
+    <string name="CrearAutor">Crear Nuevo Autor</string>
+
+    <string name="Nuevo">Nuevo</string>
+    <string name="Actualizar">Actualizar</string>
+    <string name="Eliminar">Eliminar</string>
+    <string name="Ingresar">Ingresar</string>
+    <string name="IngreseNombre">Ingrese su Nombre:</string>
+
+    <string name="Nombres">Nombres:</string>
+    <string name="Apellidos">Apellidos:</string>
+    <string name="FechaNac">Fecha de Nacimiento:</string>
+    <string name="Ecu">Es Ecuatoriano</string>
+    <string name="Numb">Numero: </string>
+
+    <string name="ISBN">ISBN: </string>
+    <string name="Titulo">Titulo: </string>
+    <string name="Pags">No Paginas: </string>
+    <string name="Edicion">Edicion: </string>
+    <string name="FechaPub">Publicacion: </string>
+    <string name="Editorial">Editorial: </string>
+
+</resources>

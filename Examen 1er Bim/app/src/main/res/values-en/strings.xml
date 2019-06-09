@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Enter the System</string>
+    <string name="GestionarLibro">Book Data</string>
+    <string name="GestionarAutor">Author Data</string>
+    <string name="ListaLibros">List of Books</string>
+    <string name="ListaAutores">List of Authors</string>
+    <string name="Autores">Authors</string>
+    <string name="CrearLibro">Create new Book</string>
+    <string name="CrearAutor">Create new Author</string>
+
+    <string name="Nuevo">New</string>
+    <string name="Actualizar">Update</string>
+    <string name="Eliminar">Delete</string>
+    <string name="Ingresar">Get in</string>
+    <string name="IngreseNombre">Enter your Name:</string>
+
+    <string name="Nombres">Names:</string>
+    <string name="Apellidos">Last Names:</string>
+    <string name="FechaNac">Birth:</string>
+    <string name="Ecu">Ecuadorian</string>
+    <string name="Numb">Numeber: </string>
+
+    <string name="ISBN">ISBN: </string>
+    <string name="Titulo">Title: </string>
+    <string name="Pags">No Pags: </string>
+    <string name="Edicion">Edition: </string>
+    <string name="FechaPub">Launch: </string>
+    <string name="Editorial">Editorial: </string>
+
+</resources>

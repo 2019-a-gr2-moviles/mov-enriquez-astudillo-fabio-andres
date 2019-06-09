@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CrearAutores">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/input_nombre"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="@+id/textView2"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/input_apellido"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4" app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"/>
+    <CheckBox
+            android:text="@string/Ecu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_ec"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_autor" app:layout_constraintStart_toStartOf="@+id/input_fecha"
+            app:layout_constraintEnd_toEndOf="@+id/input_fecha"/>
+    <Button
+            android:text="@string/CrearAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_autor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="44dp" app:layout_constraintStart_toStartOf="@+id/input_ec"
+            app:layout_constraintEnd_toEndOf="@+id/input_ec"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/input_fecha"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_ec"
+            app:layout_constraintStart_toStartOf="@+id/textView4" app:layout_constraintEnd_toEndOf="@+id/textView4"/>
+    <TextView
+            android:text="@string/Nombres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_nombre" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@string/Apellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_apellido"
+            app:layout_constraintStart_toStartOf="@+id/input_nombre"
+            app:layout_constraintEnd_toEndOf="@+id/input_nombre"/>
+    <TextView
+            android:text="@string/FechaNac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_fecha"
+            app:layout_constraintStart_toStartOf="@+id/input_apellido"
+            app:layout_constraintEnd_toEndOf="@+id/input_apellido"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.examen1erbim">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name=".GestionarLibro"
+                android:label="@string/GestionarLibro">
+        </activity>
+        <activity
+                android:name=".CrearLibros"
+                android:label="@string/CrearLibro">
+        </activity>
+        <activity android:name=".GestionarLibros"
+                  android:label="@string/ListaLibros">
+        </activity>
+        <activity android:name=".GestionarAutor"
+                  android:label="@string/GestionarAutor">
+        </activity>
+        <activity android:name=".CrearAutores"
+                  android:label="@string/CrearAutor">
+        </activity>
+        <activity android:name=".GestionarAutores"
+                  android:label="@string/ListaAutores">
+        </activity>
+        <activity android:name=".Autores"
+                  android:label="@string/Autores">
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
