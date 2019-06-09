@@ -21,13 +21,13 @@ class GestionarLibro : AppCompatActivity() {
 
 
 
-//        input2_isbn.setText(Autor.listaAutores.get(pos).libros.get(pos2).ICBN)
-//        input2_nombre.setText(Autor.listaAutores.get(pos).libros.get(pos2).nombre)
-//        input2_pags.setText(Autor.listaAutores.get(pos).libros.get(pos2).numeroPaginas)
-//        input2_edicion.setText(Autor.listaAutores.get(pos).libros.get(pos2).edicion)
-//        input2_fecha.setText(Autor.listaAutores.get(pos).libros.get(pos2).fechaPublicacion)
-//        input2_editorial.setText(Autor.listaAutores.get(pos).libros.get(pos2).nombreEditorial)
-//        input2_numero.setText(pos2)
+        input2_isbn.setText(Autor.listaAutores.get(pos).libros.get(pos2).ICBN.toString())
+        input2_nombre.setText(Autor.listaAutores.get(pos).libros.get(pos2).nombre.toString())
+        input2_pags.setText(Autor.listaAutores.get(pos).libros.get(pos2).numeroPaginas.toString())
+        input2_edicion.setText(Autor.listaAutores.get(pos).libros.get(pos2).edicion.toString())
+        input2_fecha.setText(Autor.listaAutores.get(pos).libros.get(pos2).fechaPublicacion.toString())
+        input2_editorial.setText(Autor.listaAutores.get(pos).libros.get(pos2).nombreEditorial.toString())
+        input2_numero.setText(pos2.toString())
 
         btn_eliminar.setOnClickListener {
             eliminar(pos, pos2)

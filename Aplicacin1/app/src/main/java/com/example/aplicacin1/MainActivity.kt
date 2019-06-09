@@ -18,8 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     fun irAListView(){
         val intentExplicito = Intent(
-            this,ListViewActivity::class.java
+            this,ReciclerViewActivity::class.java
         )
+
         startActivity(intentExplicito)
     }
 
