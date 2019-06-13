@@ -12,13 +12,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         adapter.setOnClickListener {
-            irAListView()
+            enviarIntentConRespuestaPropia()
+        }
+
+        btn_intent.setOnClickListener{
+            irAIntentView()
         }
     }
 
-    fun irAListView(){
+    fun enviarIntentConRespuestaPropia(){
+        val intentPropio = Intent(
+            this,
+            RsultadoPropioActivity::class.java
+        )
+
+        this.startActivityForResult(intentPropio, 305)
+    }
+
+    fun irAIntentView(){
         val intentExplicito = Intent(
-            this,ReciclerViewActivity::class.java
+            this,IntentRespuestaActivity::class.java
         )
 
         startActivity(intentExplicito)
