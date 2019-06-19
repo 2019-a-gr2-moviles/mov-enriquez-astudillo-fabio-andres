@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import com.example.myapplication.AdaptadorPersona
+import com.example.myapplication.NewAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,27 +15,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.supportActionBar?.hide()
 
-        val list = ArrayList<Persona>();
-        list.add(Persona("FB","12"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
-        list.add(Persona("DN","34"))
+        val list = ArrayList<New>();
+        list.add(New("FB","12"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
+        list.add(New("DN","34"))
 
         iniciarRecylerView(list, this, rv_main)
 
     }
 
     fun iniciarRecylerView(
-        lista: List<Persona>,
+        lista: List<New>,
         actividad: MainActivity,
         recycler_view: RecyclerView
     ) {
-        val adaptadorPersona = AdaptadorPersona(
+        val adaptadorPersona = NewAdapter(
             lista,
             actividad,
             recycler_view
