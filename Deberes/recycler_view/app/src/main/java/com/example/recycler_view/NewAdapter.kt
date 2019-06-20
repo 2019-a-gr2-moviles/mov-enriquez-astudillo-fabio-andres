@@ -11,7 +11,7 @@ import com.example.recycler_view.*
 
 class NewAdapter
 (
-    private val listaNews: List<New>,
+    private val listaNews: ArrayList<New>,
     private val contexto: MainActivity,
     private val recyclerView: RecyclerView
 ) :
@@ -19,16 +19,21 @@ class NewAdapter
 {
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var nombreTxv: TextView
-        var cedulaTxv: TextView
+        var titleTxv: TextView
+        var dateTxv: TextView
+        var notInteresting: Button
 
         init {
-            nombreTxv = view.findViewById(R.id.txv_name) as TextView
-            cedulaTxv = view.findViewById(R.id.txv_ci) as TextView
+            titleTxv = view.findViewById(R.id.txv_title) as TextView
+            dateTxv = view.findViewById(R.id.txv_date) as TextView
+            notInteresting = view.findViewById(R.id.btn_ni) as Button
 
             val layout = view.findViewById(R.id.ly_element) as LinearLayout
 
-
+            notInteresting.setOnClickListener{
+                listaNews.removeAt(getAdapterPosition())
+                contexto.iniciarRecylerView(listaNews,contexto,recyclerView)
+            }
         }
 
 
@@ -49,10 +54,10 @@ class NewAdapter
         position: Int
     )
     {
-        val persona = listaNews[position]
+        val new = listaNews[position]
 
-        myViewHolder.nombreTxv.text = persona.nombre
-        myViewHolder.cedulaTxv.text = persona.cedula
+        myViewHolder.titleTxv.text = new.title
+        myViewHolder.dateTxv.text = new.date
     }
 
 

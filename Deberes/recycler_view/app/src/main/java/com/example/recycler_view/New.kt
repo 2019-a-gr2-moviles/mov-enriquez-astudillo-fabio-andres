@@ -1,5 +1,5 @@
 package com.example.recycler_view
 
-class New (var nombre: String, var cedula: String){
+class New (var title: String, var date: String){
 
 }
