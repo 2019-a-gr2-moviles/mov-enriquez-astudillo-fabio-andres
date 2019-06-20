@@ -1,10 +1,12 @@
 package com.example.myapplication
 
+import android.graphics.drawable.Drawable
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.recycler_view.*
@@ -22,11 +24,13 @@ class NewAdapter
         var titleTxv: TextView
         var dateTxv: TextView
         var notInteresting: Button
+        var imageView: ImageView
 
         init {
             titleTxv = view.findViewById(R.id.txv_title) as TextView
             dateTxv = view.findViewById(R.id.txv_date) as TextView
             notInteresting = view.findViewById(R.id.btn_ni) as Button
+            imageView = view.findViewById(R.id.imageView) as ImageView
 
             val layout = view.findViewById(R.id.ly_element) as LinearLayout
 
@@ -58,6 +62,8 @@ class NewAdapter
 
         myViewHolder.titleTxv.text = new.title
         myViewHolder.dateTxv.text = new.date
+        myViewHolder.imageView.setImageResource(new.img)
+
     }
 
 
