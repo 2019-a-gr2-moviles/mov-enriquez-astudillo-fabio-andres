@@ -8,21 +8,15 @@
 module.exports = {
 
   attributes: {
+    nombre:{
+      type:'string',
+      required: true
+    },
 
-    //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
-    //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-    //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-
-
-    //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
-    //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
-    //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
-
-    //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-    //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-
+    usuariosDeEmpresa: {//nombre del atributo de la relación
+      collection: 'usuario',//nombre del modelo a relacionar
+      via: 'fkEmpresa'//nombre de atributo FK del otro modelo
+    },
   },
 
 };
