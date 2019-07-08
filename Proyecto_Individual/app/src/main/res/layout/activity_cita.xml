@@ -5,6 +5,39 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CitaActivity">
-
+        tools:context=".CitaActivity" android:id="@+id/cit_List_ly">
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="331dp"
+            android:layout_height="469dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" android:id="@+id/citList_rv"
+            tools:listitem="@layout/recycler_view_item" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/cit_bnv" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintVertical_bias="0.526"/>
+    <android.support.design.widget.BottomNavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/cit_bnv"
+            app:menu="@menu/bottom_navigation_menu"
+            android:background="@color/gray_light"/>
+    <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" app:srcCompat="@color/colorPrimary"
+            android:id="@+id/cit_floatbtn" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp" android:layout_marginBottom="96dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/icon_add"/>
+    <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" app:srcCompat="@color/colorPrimary" android:id="@+id/cit_floatbtn_refresh"
+            android:src="@drawable/icon_refresh"
+            app:layout_constraintStart_toStartOf="@+id/cit_floatbtn"
+            app:layout_constraintEnd_toEndOf="@+id/cit_floatbtn" android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/cit_floatbtn" app:layout_constraintHorizontal_bias="0.0"/>
 </android.support.constraint.ConstraintLayout>

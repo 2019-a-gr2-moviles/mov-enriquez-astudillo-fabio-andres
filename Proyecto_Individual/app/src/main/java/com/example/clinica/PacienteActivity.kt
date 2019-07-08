@@ -10,7 +10,6 @@ import android.util.Log
 import android.view.Menu
 import com.beust.klaxon.Klaxon
 import kotlinx.android.synthetic.main.activity_paciente.*
-import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 
@@ -19,6 +18,7 @@ class PacienteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_paciente)
+
         pac_floatbtn.setOnClickListener{
             irACrearPaciente()
         }
@@ -29,8 +29,6 @@ class PacienteActivity : AppCompatActivity() {
         cargarBottomBar()
         iniciarRecylerView(Paciente.ArrarPacientes,this,pacList_rv)
         cargarRegistros()
-
-
 
     }
 
@@ -101,7 +99,7 @@ class PacienteActivity : AppCompatActivity() {
 
     fun cargarRegistros(){
 
-        "http://192.168.1.102:3000/clinica/pacientes/listar"
+        "http://172.29.27.165:3000/clinica/pacientes/listar"
             .httpGet()
             .responseString { request, response, result ->
                 when (result) {
@@ -111,6 +109,7 @@ class PacienteActivity : AppCompatActivity() {
                     }
                     is Result.Success -> {
                         val data:String = result.get()
+                        Log.i("http",data)
                         Paciente.ArrarPacientes = Klaxon().parseArray(data)
                         Log.i("http","OK :P")
                     }

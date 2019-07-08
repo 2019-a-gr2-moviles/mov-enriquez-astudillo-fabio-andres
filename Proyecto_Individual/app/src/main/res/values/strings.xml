@@ -19,5 +19,9 @@
     <string name="alergias">Alergias:</string>
     <string name="title_activity_maps">Map</string>
 
+    <string name="especialidad">Especialidad: </string>
+    <string name="oficina">Oficina: </string>
+
+    <string name="fecha">Fecha: </string>
 
 </resources>

@@ -7,41 +7,38 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
-import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpDelete
-import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
-import java.text.SimpleDateFormat
 
-class AdaptadorPaciente (
+class AdaptadorMedico (
 
-    private val listaPacientes: List<Paciente>,
-    private val contexto: PacienteActivity,
+    private val listaMedicos: List<Medico>,
+    private val contexto: MedicoActivity,
     private val recyclerView: RecyclerView
 
-):RecyclerView.Adapter<AdaptadorPaciente.MyViewHolder>(){
+): RecyclerView.Adapter<AdaptadorMedico.MyViewHolder>(){
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nombreTxt: TextView
-        val fechaNacTxt: TextView
-        val alergiasTxt: TextView
+        val oficinaTxt: TextView
+        val especialidadTxt: TextView
         val updateBtn: ImageButton
         val deleteBtn: ImageButton
         var idBase:Int? = -1
         var posicion = -1
 
         init {
-            nombreTxt = view.findViewById(R.id.paciente_rvitem_desc_nom) as TextView
-            fechaNacTxt = view.findViewById(R.id.paciente_rvitem_desc_fechNac) as TextView
-            alergiasTxt = view.findViewById(R.id.paciente_rvitem_desc_aler) as TextView
-            updateBtn = view.findViewById(R.id.paciente_rvitem_btn_update) as ImageButton
-            deleteBtn = view.findViewById(R.id.paciente_rvitem_btn_delete) as ImageButton
+            nombreTxt = view.findViewById(R.id.medico_rvitem_desc_nom) as TextView
+            oficinaTxt = view.findViewById(R.id.medico_rvitem_desc_ofi) as TextView
+            especialidadTxt = view.findViewById(R.id.medico_rvitem_desc_esp) as TextView
+            updateBtn = view.findViewById(R.id.medico_rvitem_btn_update) as ImageButton
+            deleteBtn = view.findViewById(R.id.medico_rvitem_btn_delete) as ImageButton
 
 
             deleteBtn.setOnClickListener{
 
                 if (idBase != -1 ) {
-                    var str:String = "http://172.29.27.165:3000/clinica/pacientes/eliminar/" +idBase
+                    var str:String = "http://172.29.27.165:3000/clinica/medicos/eliminar/" +idBase
                     str
                         .httpDelete()
                         .responseString { request, response, result ->
@@ -63,14 +60,14 @@ class AdaptadorPaciente (
         }
     }
     override fun getItemCount(): Int {
-        return listaPacientes.size
+        return listaMedicos.size
     }
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): AdaptadorPaciente.MyViewHolder {
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): AdaptadorMedico.MyViewHolder {
         val itemView = LayoutInflater
             .from(p0.context)
             .inflate(
-                R.layout.paciente_element,
+                R.layout.medico_element,
                 p0,
                 false
             )
@@ -78,15 +75,16 @@ class AdaptadorPaciente (
         return MyViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(p0: AdaptadorPaciente.MyViewHolder, p1: Int) {
+    override fun onBindViewHolder(p0: AdaptadorMedico.MyViewHolder, p1: Int) {
 
-        val paciente=listaPacientes[p1]
+        val medico=listaMedicos[p1]
 
-        p0.nombreTxt.text = paciente.nombre
+        p0.nombreTxt.text = medico.nombre
         //val format = SimpleDateFormat("dd/MM/yyyy")
-        p0.fechaNacTxt.text = paciente.fechaNac
-        p0.alergiasTxt.text = paciente.alergias
-        p0.idBase = paciente.id
+        p0.oficinaTxt.text = medico.oficina
+        p0.especialidadTxt.text = medico.especialidad
+        p0.idBase = medico.id
         p0.posicion = p1
     }
+
 }

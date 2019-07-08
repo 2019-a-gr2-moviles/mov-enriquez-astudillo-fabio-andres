@@ -32,7 +32,7 @@ class CrearPacienteActivity : AppCompatActivity() {
             "alergias" to crePac_txtin_alergias.text
         )
 
-        "http://192.168.1.102:3000/clinica/pacientes/crear"
+        "http://172.29.27.165:3000/clinica/pacientes/crear"
             .httpPost(parameters)
             .responseString { request, response, result ->
                 when (result) {

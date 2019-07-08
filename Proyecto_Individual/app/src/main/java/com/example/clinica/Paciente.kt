@@ -6,7 +6,6 @@ import kotlin.collections.ArrayList
 class Paciente(
     val id:Int?,
     val nombre:String,
-    val apellido:String,
     val alergias:String,
     val fechaNac: String
 ) {

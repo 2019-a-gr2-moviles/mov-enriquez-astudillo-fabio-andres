@@ -1,5 +1,4 @@
 package com.example.clinica
 
-class Cita {
-
+class AdaptadorCita {
 }
