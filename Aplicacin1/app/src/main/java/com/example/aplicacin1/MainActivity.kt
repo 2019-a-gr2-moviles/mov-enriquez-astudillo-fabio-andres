@@ -1,7 +1,7 @@
 package com.example.aplicacin1
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter.setOnClickListener {
-            enviarIntentConRespuestaPropia()
+        maps.setOnClickListener {
+            irAMapas()
         }
 
         btn_intent.setOnClickListener{
@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun enviarIntentConRespuestaPropia(){
+    fun irAMapas(){
         val intentPropio = Intent(
             this,
-            RsultadoPropioActivity::class.java
+            MapsActivity::class.java
         )
 
         this.startActivityForResult(intentPropio, 305)

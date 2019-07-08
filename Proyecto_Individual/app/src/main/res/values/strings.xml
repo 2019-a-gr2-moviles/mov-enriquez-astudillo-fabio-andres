@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Clinica</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="enviar">Enviar</string>
+    <string name="salir">Salir</string>
+    <string name="crear">Crear</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="buscar">Buscar</string>
+    <string name="nombreClinica">Clinica Poli Saludable</string>
+
+    <string name="medico">Medico</string>
+    <string name="paciente">Paciente</string>
+    <string name="cita">Cita</string>
+
+    <string name="nombre">Nombre:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="fechaNac">Nacimiento:</string>
+    <string name="alergias">Alergias:</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,10 +8,10 @@
         tools:context=".MainActivity">
 
     <Button
-            android:text="Adapter"
+            android:text="Maps"
             android:layout_width="94dp"
             android:layout_height="42dp"
-            android:id="@+id/adapter"
+            android:id="@+id/maps"
             app:layout_constraintEnd_toEndOf="@+id/btn_intent"
             app:layout_constraintStart_toStartOf="@+id/btn_intent" android:layout_marginStart="8dp"
             app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="292dp"
@@ -33,4 +33,4 @@
             app:layout_constraintHorizontal_bias="0.498" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_intent"/>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

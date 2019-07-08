@@ -1,6 +1,6 @@
 package com.example.aplicacin1
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
@@ -9,6 +9,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 
 class ConexionHttpActivity : AppCompatActivity() {
 
@@ -84,7 +85,7 @@ class ConexionHttpActivity : AppCompatActivity() {
             )
         }
 
-        "https://192.168.0.49:1337/empresa/1"
+        "http://172.29.146.126:1337/empresa/1"
             .httpGet()
             .responseString { request, response, result ->
                 when (result) {
@@ -99,10 +100,28 @@ class ConexionHttpActivity : AppCompatActivity() {
                         val empresaParseada = Klaxon()
                             .parse<Empresa>(data)
                         if (empresaParseada != null) {
-                            Log.i("http"," iiiiiiiiiiiiiiiiiiii ")
-                            Log.i("http","${empresaParseada.nombre} ")
-                            Log.i("http","${empresaParseada.id} ")
+                            Log.i("http", " iiiiiiiiiiiiiiiiiiii ")
+                            Log.i("http", "${empresaParseada.nombre} ")
+                            Log.i("http", "${empresaParseada.id} ")
                         }
+                    }
+                }
+            }
+
+        val parametrosCrearEmpresa = listOf(
+            "nombre" to "PoliLabs"
+        )
+        val urlCrearEmpresa = "http://172.29.146.126:1337/empresa"
+            .httpPost(parametrosCrearEmpresa)
+            .responseString { request, response, result ->
+                when(result){
+                    is Failure -> {
+                        val error = result.getException()
+                        Log.i("http", "Error: ${error}")
+                    }
+                    is Success -> {
+                        val empresaString = result.get()
+                        Log.i("http", "$empresaString")
                     }
                 }
             }
